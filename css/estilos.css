@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    scroll-behavior: smooth;
+}
+
+:root{
+    --bg--color: #fff;
+    --text--color: #000000;
+    --text--grey: #ffffffb0;
+}
+.header{
+  background-image: linear-gradient(0deg , rgb(0, 0, 0 , 0.6) ,
+  rgb(0, 0, 0 ,  0.4)
+  ) , url('../img/new_balance_hero.jpg');
+  min-height: 100vh;
+ background-position: center center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-attachment: scroll;
+ 
+}
+.container__navbar{
+    background-color: rgba(0, 0, 0, 0.55) ;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sticky{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+   background-color: #000000;
+
+}
+.navbar{
+    
+    min-width: 450px;
+    min-height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+.wrapper__menu{
+    display: none;
+}
+@media (max-width:425px){
+    .navbar{
+        display: none;
+    }
+    .wrapper__menu{
+        display: flex;
+        margin-right: 1rem;
+        
+    }.menu__img{
+        width: 50px;
+        height: 50px;
+        color: rgb(255, 255, 255);
+    }
+    .container__navbar{
+        justify-content: end;
+    }
+    
+}
+
+@media (max-width:768px){
+    .navbar{
+        display: none;
+    }
+    .wrapper__menu{
+        display: flex;
+        margin-right: 1rem;
+        
+    }.menu__img{
+        width: 50px;
+        height: 50px;
+        color: rgb(255, 255, 255);
+    }
+    .container__navbar{
+        justify-content: end;
+    }
+
+}
+
+.wrapper__logo{
+    width: 450px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.wrapper__logo img{
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+    object-position: center;
+    
+}
+.navbar a{
+    text-decoration: none;
+    color: rgb(211, 207, 207);
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+.navbar a:hover{
+    color: #fff;
+   border-bottom: 1px solid #fff;
+   transform: translateX(10px);
+}
+.wrapper__text{
+ position: absolute; 
+ top: 30%;
+ right: 20%;
+ color: #fff;
+ width: 420px;
+ display: flex;
+ flex-direction: column;
+ flex-wrap: wrap;
+ gap: 1rem;
+}
+@media (max-width:425px) {
+    .wrapper__text{
+        width: 320px;
+        right: 10%;
+    }
+}
+.wrapper__text h1 {
+    font-size: 3rem;
+}
+.wrapper__text .border__bottom{
+    border-bottom:2px solid white;
+}
+.wrapper__text p{
+    font-size: 1.3rem;
+    color:var(--text--grey);
+}
+.arrow{
+    width: 100px;
+    height: 100px;
+}
+.down__arrow{
+    position: absolute;
+    bottom: 10%;
+    right: 50%;
+  animation: downArrow 2s infinite ease-in-out ;
+  
+}
+@media (max-width:425px){
+    .down__arrow{
+        right: 40%;
+    }
+}
+@keyframes downArrow {
+    0%{
+        bottom: 10%;
+    }
+    50%{
+        bottom: 4%;
+    }
+    100%{
+        bottom: 10%;
+    }
+}
+
+
+/* ABOUT */
+
+
+.section__about{
+    display: flex;
+    flex-direction: column;
+}
+.about__text{
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 2.8rem;
+
+}
+.about__image{
+    max-width: 500px;
+    max-height: 500px;
+}
+
+@media (max-width:1068px){
+    .about__image{
+      width: 360px;
+      height: 400px;
+    }
+  } 
+.article__about{
+ width: 100%;
+ margin: 0 auto;
+}
+.about__container{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.about__container .about__redes .about__parragraph{
+    max-width: 500px;
+    letter-spacing: 3px;
+    font-size: 1.4rem;
+}
+@media (max-width:1068px){
+    .about__container .about__redes .about__parragraph{
+        letter-spacing: 2px;
+        font-size: 1.2rem;
+    }
+   
+  } 
+
+.about__img {
+    width: 50px;
+    height: 40px; 
+   margin: 30px 0 20px 20px;
+}
+@media (max-width:1068px){
+    .about__img {
+        
+       margin: 10px 0 10px 5px;
+    }
+}
+@media (max-width:425px){
+.about__container {
+    flex-direction: column;
+    justify-content: start;
+    
+}.about__redes{
+    text-align: center;
+}
+.about__container .about__redes .about__parragraph{
+  width: 90%;
+  margin: 10px auto;
+  
+}
+
+}
+
+/* brand */
+
+.section__product{
+    height: 100vh;
+    width: 100%;
+    background-color: #ffffff9c;
+}
+.container__product{
+    margin: 6rem;
+    text-align: center;
+}
+.container__product .text__zapatillas{
+    font-size: 2.6rem;
+    font-weight: bold;
+}
+.wrapper__product {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8rem;
+}
+.wrapper__product .card__body{
+    
+    /* border: 1px solid black ; */
+    max-width: 230px;
+    min-height: 380px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(235,235,235,0.7);
+-moz-box-shadow: 10px 10px 5px 0px rgba(235,235,235,0.7);
+box-shadow: 10px 10px 5px 0px rgba(235,235,235,0.7);
+
+}
+.card__body .box__card{
+    width: 90%;
+    min-height: 380px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    
+}
+.card__body .card__img img{
+    width: 100%;
+    min-height: 100px;
+    object-fit: cover;
+}
+.card__body .card__marca img{
+  width: 40px;
+  height: 28px;
+  object-fit: cover;
+}
+
+ .border__bottom{
+    margin: 0 auto;
+    width: 70%;
+    height: 10px;
+    border-bottom: 2px solid #000000;
+    animation: borderBottom 1s ease-in-out ;
+} 
+@keyframes borderBottom {
+    0%{
+        width: 0;
+    }100%{
+        width: 80%;
+    }
+}
+.new__product{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.new__text{
+    margin: 3px 5px;
+    background-color: #000000;
+    color: white;
+    padding: 3px;
+}
+.card__stock{
+    width: 100%;
+}
+.stock__card{
+    background-color: rgb(147, 234, 16);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    
+}
+
+/* icon whatsapp */
+.icon__whatsapp a > svg{
+    width: 70px;
+    height: 60px;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+
+/* breakpoint 1068px */
